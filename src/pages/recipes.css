@@ -1,0 +1,13 @@
+.container{
+    align-self: center;
+}
+
+img{
+    height: 18rem;
+    width: 30rem;
+}
+
+.card{
+    background-color: greenyellow;  
+    width: 30rem; 
+}
