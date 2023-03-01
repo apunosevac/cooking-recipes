@@ -6,16 +6,16 @@ import com.apunosevac.project.recipes.entity.Recipe;
 
 public interface CookingService {
 
-    public List<Recipe> findAll();
+    List<Recipe> findAll();
 
-    public String deleteById(int id);
+    String deleteById(int id);
 
-    public Recipe save(Recipe nakit);
+    Recipe save(Recipe nakit);
 
-    public Recipe findById(int id);
+    Recipe findById(int id);
 
-    public List<Recipe> findByName(String name);
+    List<Recipe> findByName(String name);
 
-    public List<Recipe> findByChef(String chef);
+    List<Recipe> findByChef(String chef);
     
 }

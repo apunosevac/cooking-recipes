@@ -1,9 +1,6 @@
 package com.apunosevac.project.recipes.entity;
 
-
-
 import java.util.List;
-
 import jakarta.persistence.*;
 
 @Entity
@@ -14,7 +11,6 @@ public class Chef {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "chef_id")
     private int id;
-    @Column(name = "name")
     private String name;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
