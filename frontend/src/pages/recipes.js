@@ -26,22 +26,22 @@ const Recipes = () => {
 
   const groupList = groups.map(recipe => {
     return <Col><Card>
-    <Card.Img variant="top" src={require(`../img/${recipe.imagePath}.png`)} />
-    <Card.Body>
-      <Card.Title><b>{recipe.recipeName}</b></Card.Title>
-      <Card.Text>
-        {recipe.recipeText}
-      </Card.Text>
-      <Button variant="primary">Go somewhere</Button>
-    </Card.Body>
-  </Card></Col>
+      <Card.Img variant="top" src={require(`../img/${recipe.imagePath}.png`)} />
+      <Card.Body>
+        <Card.Title><b>{recipe.recipeName}</b></Card.Title>
+        <Card.Text><b>Ingredients:</b><br></br>
+          {recipe.recipeText}
+        </Card.Text>
+        <Button variant="primary">Preparation</Button>
+      </Card.Body>
+    </Card></Col>
   });
 
   return (
     <Container style={{ marginLeft: 100, marginTop: 50 }}>
       <div>{groupList}</div>
     </Container>
-    )
+  )
 };
 
 export default Recipes;
