@@ -24,8 +24,10 @@ public class Recipe {
     @Column(name = "name")
     private String recipeName;
 
-    @Column(name = "text")
-    private String recipeText;
+    @Column(name = "ingredients")
+    private String recipeIngredients;
+
+    private String preparation;
 
     @ManyToOne
     @JoinColumn(name = "chef_id")
@@ -35,10 +37,11 @@ public class Recipe {
     public Recipe() {
     }
 
-    public Recipe(String imagePath, String recipeName, String recipeText, Chef chef) {
+    public Recipe(String imagePath, String recipeName, String recipeIngredients, String preparation, Chef chef) {
         this.imagePath = imagePath;
         this.recipeName = recipeName;
-        this.recipeText = recipeText;
+        this.recipeIngredients = recipeIngredients;
+        this.preparation = preparation;
         this.chef = chef;
     }
 
@@ -66,12 +69,20 @@ public class Recipe {
         this.recipeName = recipeName;
     }
 
-    public String getRecipeText() {
-        return this.recipeText;
+    public String getrecipeIngredients() {
+        return this.recipeIngredients;
     }
 
-    public void setRecipeText(String recipeText) {
-        this.recipeText = recipeText;
+    public void setrecipeIngredients(String recipeIngredients) {
+        this.recipeIngredients = recipeIngredients;
+    }
+
+    public String getPreparation() {
+        return this.preparation;
+    }
+
+    public void setPreparation(String preparation) {
+        this.preparation = preparation;
     }
 
     public Chef getchef() {
@@ -97,8 +108,8 @@ public class Recipe {
         return this;
     }
 
-    public Recipe recipeText(String recipeText) {
-        setRecipeText(recipeText);
+    public Recipe recipeIngredients(String recipeIngredients) {
+        setrecipeIngredients(recipeIngredients);
         return this;
     }
 
@@ -113,7 +124,8 @@ public class Recipe {
             " id='" + getId() + "'" +
             ", imagePath='" + getImagePath() + "'" +
             ", recipeName='" + getRecipeName() + "'" +
-            ", recipeText='" + getRecipeText() + "'" +
+            ", recipeIngredients='" + getrecipeIngredients() + "'" +
+            ", preparation='" + getPreparation() + "'" +
             ", chef='" + getchef() + "'" +
             "}";
     }

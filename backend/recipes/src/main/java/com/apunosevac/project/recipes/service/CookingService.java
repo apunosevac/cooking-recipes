@@ -10,7 +10,7 @@ public interface CookingService {
 
     String deleteById(int id);
 
-    Recipe save(Recipe nakit);
+    Recipe save(Recipe recipe);
 
     Recipe findById(int id);
 

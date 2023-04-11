@@ -7,6 +7,10 @@ class RecipeService {
     getUsers(){
         return axios.get(RECIPE_REST_API_URL);
     }
+
+    saveRecipe(recipe){
+        return axios.post(RECIPE_REST_API_URL + "/saveRecipe", recipe);
+    }
 }
 
 export default new RecipeService();

@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route }
 import Home from './pages';
 import About from './pages/about';
 import Recipes from './pages/recipes';
-import Chefs from './pages/chefs';
+import NewRecipe from './pages/newRecipe';
 
 function App() {
     return (
@@ -16,7 +16,7 @@ function App() {
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/home' element={<Home />} />
                 <Route path='/recipes' element={<Recipes />} />
-                <Route path='/chefs' element={<Chefs />} />
+                <Route path='/newRecipe' element={<NewRecipe />} />
                 <Route path='/about' element={<About />} />
             </Routes>
         </Router>

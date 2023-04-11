@@ -13,8 +13,8 @@ const Navbar = () => {
           <NavLink to="/recipes" activeStyle>
             Recipes
           </NavLink>
-          <NavLink to="/chefs" activeStyle>
-            Chefs
+          <NavLink to="/newRecipe" activeStyle>
+            Add a recipe
           </NavLink>
           <NavLink to="/about" activeStyle>
             About

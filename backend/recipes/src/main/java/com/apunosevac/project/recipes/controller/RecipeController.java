@@ -30,7 +30,7 @@ public class RecipeController {
         return service.findById(id);
     }
 
-    @PostMapping("/recipe")
+    @PostMapping("/recipe/saveRecipe")
     public Recipe addNew(@RequestBody Recipe recipe){
         return service.save(recipe);
     }
