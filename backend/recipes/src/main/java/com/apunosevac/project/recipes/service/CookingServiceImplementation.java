@@ -43,10 +43,5 @@ public class CookingServiceImplementation implements CookingService{
     public List<Recipe> findByName(String recipeName) {
         return recipeRepository.findAllByRecipeName(recipeName);
     }
-
-    @Override
-    public List<Recipe> findByChef(String chef) {
-        return recipeRepository.findAllByChefName(chef);
-    }
     
 }

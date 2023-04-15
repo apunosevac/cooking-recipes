@@ -9,7 +9,7 @@ class RecipeService {
     }
 
     saveRecipe(recipe){
-        return axios.post(RECIPE_REST_API_URL + "/saveRecipe", recipe);
+        return axios.post(RECIPE_REST_API_URL, recipe);
     }
 }
 

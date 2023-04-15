@@ -29,20 +29,14 @@ public class Recipe {
 
     private String preparation;
 
-    @ManyToOne
-    @JoinColumn(name = "chef_id")
-    private Chef chef;
-    
-
     public Recipe() {
     }
 
-    public Recipe(String imagePath, String recipeName, String recipeIngredients, String preparation, Chef chef) {
+    public Recipe(String imagePath, String recipeName, String recipeIngredients, String preparation) {
         this.imagePath = imagePath;
         this.recipeName = recipeName;
         this.recipeIngredients = recipeIngredients;
         this.preparation = preparation;
-        this.chef = chef;
     }
 
     public int getId() {
@@ -85,14 +79,6 @@ public class Recipe {
         this.preparation = preparation;
     }
 
-    public Chef getchef() {
-        return this.chef;
-    }
-
-    public void setchef(Chef chef) {
-        this.chef = chef;
-    }
-
     public Recipe id(int id) {
         setId(id);
         return this;
@@ -113,11 +99,6 @@ public class Recipe {
         return this;
     }
 
-    public Recipe chef(Chef chef) {
-        setchef(chef);
-        return this;
-    }
-
     @Override
     public String toString() {
         return "{" +
@@ -126,7 +107,6 @@ public class Recipe {
             ", recipeName='" + getRecipeName() + "'" +
             ", recipeIngredients='" + getrecipeIngredients() + "'" +
             ", preparation='" + getPreparation() + "'" +
-            ", chef='" + getchef() + "'" +
             "}";
     }
 

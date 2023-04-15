@@ -15,7 +15,5 @@ public interface CookingService {
     Recipe findById(int id);
 
     List<Recipe> findByName(String name);
-
-    List<Recipe> findByChef(String chef);
     
 }

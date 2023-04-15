@@ -1,11 +1,12 @@
 import React from "react";
-import {useState} from 'react';
+import { useState } from 'react';
 import recipeService from '../service/RecipeService.js';
 function RecipeForm() {
+    
     const [recipe, setRecipe] = useState({
         recipeName: "",
         imagePath: "",
-        ingredients: "",
+        recipeIngredients: "",
         preparation: "",
     });
     const [msg, setMsg] = useState("")
@@ -25,7 +26,7 @@ function RecipeForm() {
                 setRecipe({
                     recipeName: "",
                     imagePath: "",
-                    ingredients: "",
+                    recipeIngredients: "",
                     preparation: "",
                 })
             }).catch((error) => {
@@ -57,15 +58,15 @@ function RecipeForm() {
                                     </div>
                                     <div className='mb-3'>
                                         <label>Ingredients</label>
-                                        <textarea name="ingredients" className='form-control'
+                                        <input type="text" name="recipeIngredients" className='form-control'
                                             onChange={(e) => handleChange(e)}
-                                            value={recipe.ingredients}></textarea>
+                                            value={recipe.recipeIngredients} />
                                     </div>
                                     <div className='mb-3'>
                                         <label>Preparation</label>
-                                        <textarea name="preparation" className='form-control'
+                                        <input type="text" name="preparation" className='form-control'
                                             onChange={(e) => handleChange(e)}
-                                            value={recipe.preparation}></textarea>
+                                            value={recipe.preparation} />
                                     </div>
                                     <button className="btn btn-primary col-md-12">Submit</button>
                                 </form>
