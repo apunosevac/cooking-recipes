@@ -1,12 +1,12 @@
 package com.apunosevac.project.recipes.entity;
 
+import java.lang.String;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -18,8 +18,7 @@ public class Recipe {
     @Column(name = "recipe_id")
     private int id;
 
-    @Column(name = "image")
-    private String imagePath;
+    private String image;
 
     @Column(name = "name")
     private String recipeName;
@@ -32,8 +31,8 @@ public class Recipe {
     public Recipe() {
     }
 
-    public Recipe(String imagePath, String recipeName, String recipeIngredients, String preparation) {
-        this.imagePath = imagePath;
+    public Recipe(String image, String recipeName, String recipeIngredients, String preparation) {
+        this.image = image;
         this.recipeName = recipeName;
         this.recipeIngredients = recipeIngredients;
         this.preparation = preparation;
@@ -47,12 +46,12 @@ public class Recipe {
         this.id = id;
     }
 
-    public String getImagePath() {
-        return this.imagePath;
+    public String getimage() {
+        return this.image;
     }
 
-    public void setImagePath(String imagePath) {
-        this.imagePath = imagePath;
+    public void setimage(String image) {
+        this.image = image;
     }
 
     public String getRecipeName() {
@@ -84,8 +83,8 @@ public class Recipe {
         return this;
     }
 
-    public Recipe imagePath(String imagePath) {
-        setImagePath(imagePath);
+    public Recipe image(String image) {
+        setimage(image);
         return this;
     }
 
@@ -103,7 +102,7 @@ public class Recipe {
     public String toString() {
         return "{" +
             " id='" + getId() + "'" +
-            ", imagePath='" + getImagePath() + "'" +
+            ", image='" + getimage() + "'" +
             ", recipeName='" + getRecipeName() + "'" +
             ", recipeIngredients='" + getrecipeIngredients() + "'" +
             ", preparation='" + getPreparation() + "'" +

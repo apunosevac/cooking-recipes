@@ -26,11 +26,12 @@ const Recipes = () => {
 
   const groupList = groups.map(recipe => {
     return <Col><Card xs={12} sm={4} md={4}>
-      <Card.Img variant="top" src={require(`../img/${recipe.imagePath}.png`)} />
+      <Card.Img variant="top" src={require(`../img/${recipe.image}.png`)} />
       <Card.Body>
         <Card.Title><b>{recipe.recipeName}</b></Card.Title>
         <Card.Text><b>Ingredients:</b><br></br>
-          {recipe.ingredients}
+          {recipe.recipeIngredients}
+          <br></br>
           <br></br>
           <b>Preparation:</b>
           {recipe.preparation}
